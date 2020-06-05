@@ -13,7 +13,7 @@ Once you have Docker running you can download the image like so:
 
 Once you have this you can start the container like so:
 ```bash
-(user@host)-$ docker run -it --rm -v $(pwd):/data --entrypoint /bin/bash reslp/smsi_ubuntu:v1
+(user@host)-$ docker run -it --rm -v "$(pwd)":/data --entrypoint /bin/bash reslp/smsi_ubuntu:v1
 ```
 
 In the first part of the session we're going to follow some material that has been developed for a course on Reproducible research that has been cancelled unfortunately due to Corona. Nevertheless the developers kindly made their material available [here](https://nbis-reproducible-research.readthedocs.io/en/devel/).
@@ -27,6 +27,6 @@ For the second part, we're going to need to start the container in a different w
 
 Then restart, but giving the container extra privileges (I'll explain why we need this in a sec):
 ```bash
-(user@host)-$ docker run --privileged -it --rm -v $(pwd):/data --entrypoint /bin/bash reslp/smsi_ubuntu:v1
+(user@host)-$ docker run --privileged -it --rm -v "$(pwd)":/data --entrypoint /bin/bash reslp/smsi_ubuntu:v1
 ```
 
